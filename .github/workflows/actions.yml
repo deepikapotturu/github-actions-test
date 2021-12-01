@@ -26,5 +26,5 @@ jobs:
       - name: List files after checkout
         run: |
           pwd
-          ls -a
+          ls
         
