@@ -1,6 +1,14 @@
 name: Actions workflow
 
-on: [push, pull_request]
+on: 
+  repository_dispatch: 
+    types: build
+  # push:
+  # schedule:
+  #   - cron: "0/5 * * * *"
+  #   - cron: "0/6 * * * *"
+  pull_request: 
+    types: [closed, assigned, opened, reopened]
 
 jobs:
   run-github-actions:
@@ -26,5 +34,5 @@ jobs:
       - name: List files after checkout
         run: |
           pwd
-          ls -a
+          ls
         
