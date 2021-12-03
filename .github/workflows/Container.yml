@@ -9,4 +9,4 @@ jobs:
       - name: Log node node_version
         run: |
           node -v 
-          cat /etc/os-realease
+          cat /etc/os-release
